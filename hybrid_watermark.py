@@ -1,12 +1,12 @@
 # Hybrid
 
 from random import randint
-from Crypto.Hash import MD5
+from Crypto.Hash import SHA256
 
 import util as watermark_utils
 import time_watermark
 
-MD5_LENGTH = 128
+SHA256_LENGTH = 256
 
 class Hybrid():
     def __init__(self, transform):
@@ -20,7 +20,7 @@ class Hybrid():
         time : LSB object
         """
         self.transform = transform
-        self.key = [(randint(0, 307829), 0) for _ in range(MD5_LENGTH)]#[(randint(0, sys.maxsize), 0) for _ in range(MD5_LENGTH)] # saved here for testing purposes
+        self.key = [(randint(0, 307829), 0) for _ in range(SHA256_LENGTH)]#[(randint(0, sys.maxsize), 0) for _ in range(SHA256_LENGTH)] # saved here for testing purposes
 
     def embed_watermark(self, host):
         """
@@ -45,7 +45,7 @@ class Hybrid():
         ready_output = zerod_output.tobytes()
 
         # hash 
-        audio_hash = self.md5_audio(ready_output)
+        audio_hash = self.sha256_audio(ready_output)
 
         # LSB
         lsb_watermark = time_watermark.LSB(self.key, audio_hash)
@@ -77,9 +77,9 @@ class Hybrid():
         exwmbits = "".join([str(int(x)) for x in extracted_watermark])
 
         return exwm_lsbtest, ready_output, exwmbits
-        # audio_hash_checker = self.md5_audio(ready_output)
+        # audio_hash_checker = self.sha256_audio(ready_output)
 
-    def md5_audio(self, tohash):
+    def sha256_audio(self, tohash):
         """
         takes in bytes returns bit string
 
@@ -93,6 +93,6 @@ class Hybrid():
         string
             string of bits
         """
-        md5 = MD5.new()
-        md5.update(tohash)
-        return watermark_utils.bytestring_to_bitstring(md5.digest())
+        sha256 = SHA256.new()
+        sha256.update(tohash)
+        return watermark_utils.bytestring_to_bitstring(sha256.digest())
