@@ -173,22 +173,22 @@ class RobustnessEvaluation():
             print("ERROR: run_suite needs at least one watermark")
             return -1
 
-        self.resample(audio, sr)
-        rs_res = self.check_watermark(audio, wm_func, hash, wmbits)
+        # attack_audio = self.resample(audio, sr)
+        # rs_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
 
-        self.requantize(audio)
-        rq_res = self.check_watermark(audio, wm_func, hash, wmbits)
+        # attack_audio = self.requantize(audio)
+        # rq_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
 
-        self.noise(audio)
-        n_res = self.check_watermark(audio, wm_func, hash, wmbits)
+        attack_audio = self.noise(audio)
+        n_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
 
-        self.lowpass(audio, sr, order)
-        lp_res = self.check_watermark(audio, wm_func, hash, wmbits)
+        attack_audio = self.lowpass(audio, sr, order)
+        lp_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
 
-        self.highpass(audio, sr, order)
-        hp_res = self.check_watermark(audio, wm_func, hash, wmbits)
+        attack_audio = self.highpass(audio, sr, order)
+        hp_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
 
-        self.amplitude(audio)
-        a_res = self.check_watermark(audio, wm_func, hash, wmbits)
+        attack_audio = self.amplitude(audio)
+        a_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
 
-        return rs_res, rq_res, n_res, lp_res, hp_res, a_res
+        return n_res, lp_res, hp_res, a_res # rs_res, rq_res, 
