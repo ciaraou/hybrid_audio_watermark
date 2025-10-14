@@ -1,7 +1,7 @@
 import numpy as np
 
-from dct_transform import DCT
-from window import Window
+from utils.watermark.dct_transform import DCT
+from utils.watermark.window import Window
 
 class WatermarkDCT(DCT):
     """

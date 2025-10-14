@@ -3,6 +3,8 @@ from scipy import signal
 
 import librosa
 
+from globals import metric_names, attack_names
+
 
 RESAMPLE_VAL = 22050
 REQUANTIZE_VAL = 8
@@ -14,6 +16,7 @@ AMPLITUDE_VAL = 1.1
 # compression
 # echo
 # desync
+
 
 class RobustnessEvaluation():
     """
@@ -87,7 +90,7 @@ class RobustnessEvaluation():
         pr = self.precision(tp, fp)
         nc = self.normalized_correlation(real, extracted)
         ber = self.bit_error_rate(real, diff)
-        return dr, pr, nc, ber
+        return {metric_names[0]: dr, metric_names[1]: pr, metric_names[2]: nc, metric_names[3]: ber}
 
     def resample(self, audio, sr):
         return librosa.resample(audio, orig_sr=sr, target_sr=self.resample_val)
@@ -175,20 +178,42 @@ class RobustnessEvaluation():
 
         # attack_audio = self.resample(audio, sr)
         # rs_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
+        # rs_res = rs_res[0]
+        # rs_res["Watermark"] = ""
+        # rs_res["Attack"] = attack_names[0]
 
         # attack_audio = self.requantize(audio)
         # rq_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
+        # rq_res = rq_res[0]
+        # rq_res["Watermark"] = ""
+        # rq_res["Attack"] = attack_names[1]
+
+        # temporarily take one watermark, TODO fix this
+        picky = 0 if hash != "" else 1
 
         attack_audio = self.noise(audio)
         n_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
-
+        n_res = n_res[picky] 
+        n_res["Watermark"] = ""
+        n_res["Attack"] = attack_names[2]
+ 
         attack_audio = self.lowpass(audio, sr, order)
         lp_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
+        lp_res = lp_res[picky]
+        lp_res["Watermark"] = ""
+        lp_res["Attack"] = attack_names[3]
 
         attack_audio = self.highpass(audio, sr, order)
         hp_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
+        hp_res = hp_res[picky]
+        hp_res["Watermark"] = ""
+        hp_res["Attack"] = attack_names[4]
 
         attack_audio = self.amplitude(audio)
         a_res = self.check_watermark(attack_audio, wm_func, hash, wmbits)
+        a_res = a_res[picky]
+        a_res["Watermark"] = ""
+        a_res["Attack"] = attack_names[5]
 
         return n_res, lp_res, hp_res, a_res # rs_res, rq_res, 
+    

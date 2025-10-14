@@ -41,7 +41,7 @@ def bit_change(value, bit, index=0):
 
     value_int = float64_to_uint64_bits(value) # convert to uint64 (type only - binary same) for bitwise op
     
-    if bit == "1":
+    if bit == "1" or bit == 1:
         res = value_int | mask # bitwise or: value at index will be 1 
     else:
         # print("zero?")

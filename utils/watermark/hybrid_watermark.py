@@ -3,8 +3,8 @@
 from random import randint
 from Crypto.Hash import SHA256
 
-import util as watermark_utils
-import time_watermark
+import utils.watermark.util as watermark_utils
+import utils.watermark.time_watermark as time_watermark
 
 SHA256_LENGTH = 256
 

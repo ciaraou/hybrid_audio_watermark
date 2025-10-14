@@ -3,7 +3,7 @@ from scipy.fft import dct, idct
 from librosa import util
 # from mdct import mdct, imdct
 # temp:
-from mdct_library_functions import mdct, imdct
+from utils.watermark.mdct_library_functions import mdct, imdct
 
 class DCT():
     """

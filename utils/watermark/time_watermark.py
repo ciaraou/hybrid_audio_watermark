@@ -1,5 +1,5 @@
 import numpy as np
-import util as watermark_utils
+import utils.watermark.util as watermark_utils
 
 class LSB():
     def __init__(self, key, watermark):
