@@ -36,6 +36,21 @@ def float64_to_binary(num):
 def bytestring_to_bitstring(byte_string):
     return ''.join(format(byte, '08b') for byte in byte_string)
 
+def tobits(s):
+    result = []
+    for c in s:
+        bits = bin(ord(c))[2:]
+        bits = '00000000'[len(bits):] + bits
+        result.extend([int(b) for b in bits])
+    return result
+
+def frombits(bits):
+    chars = []
+    for b in range(len(bits) / 8):
+        byte = bits[b*8:(b+1)*8]
+        chars.append(chr(int(''.join([str(bit) for bit in byte]), 2)))
+    return ''.join(chars)
+
 def bit_change(value, bit, index=0):
     mask = (1 << (index % FLOAT64_BITSIZE)) # system endian doesn't matter because float64_to_uint64_bits does big endian
 

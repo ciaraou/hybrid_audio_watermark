@@ -3,7 +3,8 @@ from scipy.fft import dct, idct
 from librosa import util
 # from mdct import mdct, imdct
 # temp:
-from utils.watermark.mdct_library_functions import mdct, imdct
+from deprecated.mdct_library_functions import mdct, imdct
+from globals import n_fft, hop_length
 
 class DCT():
     """
@@ -34,11 +35,10 @@ class DCT():
         """
         self.window = window # TODO: not great organization of parameters right now - clean that up + names
         self.N = self.window.N
-        self.hop_length = self.N # for 50% overlap
 
     def frame_buffer(self, x):
         # todo add option to change
-        return util.frame(x, frame_length=self.N*2, hop_length=self.hop_length, axis=0, writeable=True) # check axis
+        return util.frame(x, frame_length=hop_length*2, hop_length=hop_length, axis=0, writeable=True) # check axis
     
     def deframe_buffer(self, frames, x):
         # todo make complimentary to frame_buffer if it changes
@@ -67,26 +67,52 @@ class DCT():
             print("expecting 1d audio buffer.")
             return -1
         
-        # frame
+        # Frame the audio
         frames = self.frame_buffer(x)
-
-        # TODO window
-
-        # transform
-        # todo: look at types 
-        return dct(frames, axis=1)
+        
+        # Apply window (sine window for MDCT)
+        # Assuming frames shape is (num_frames, frame_length)
+        window = np.sin(np.pi * (np.arange(frames.shape[1]) + 0.5) / frames.shape[1])
+        windowed_frames = frames * window[np.newaxis, :]
+        
+        # Apply DCT (Type-IV for proper MDCT)
+        # Note: scipy's dct type 4 is the MDCT
+        return dct(windowed_frames, type=4, axis=1, norm='ortho')
 
     def windowed_idct(self, frames, x):
         if len(frames.shape) != 2:
             print("expecting 2d audio buffer frames")
-            return -1 
+            return -1
         
-        # de-transform and de-frame
-        res = idct(frames, axis=1)
+        # Apply inverse DCT (Type-IV, which is its own inverse)
+        time_frames = idct(frames, type=4, axis=1, norm='ortho')
+        
+        # Apply window again (MDCT property: same window for analysis and synthesis)
+        window = np.sin(np.pi * (np.arange(time_frames.shape[1]) + 0.5) / time_frames.shape[1])
+        windowed_frames = time_frames * window[np.newaxis, :]
+        
+        # Overlap-add reconstruction
+        return self.overlap_add(windowed_frames, len(x))
 
-        # TODO window
-
-        return self.deframe_buffer(res, x)
+    def overlap_add(self, frames, original_length):
+        """
+        Overlap-add reconstruction for MDCT frames.
+        Assumes 50% overlap (hop_length = frame_length // 2)
+        """
+        num_frames, frame_length = frames.shape
+        hop_length = frame_length // 2
+        
+        # Allocate output buffer
+        output_length = (num_frames - 1) * hop_length + frame_length
+        output = np.zeros(output_length)
+        
+        # Overlap-add each frame
+        for i, frame in enumerate(frames):
+            start = i * hop_length
+            output[start:start + frame_length] += frame
+        
+        # Trim to original length
+        return output[:original_length]
     
     # --------------------
 

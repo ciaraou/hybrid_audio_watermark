@@ -50,7 +50,7 @@ class RobustnessEvaluation():
         """
         PR = TP / (TP + FP)
         """
-        return tp / (tp + fp)
+        return tp / (tp + fp + 1e-10)
 
     def normalized_correlation(self, real, extracted):
         arr1 = np.array([int(bit) for bit in real])
@@ -93,14 +93,15 @@ class RobustnessEvaluation():
         return {metric_names[0]: dr, metric_names[1]: pr, metric_names[2]: nc, metric_names[3]: ber}
 
     def resample(self, audio, sr):
-        return librosa.resample(audio, orig_sr=sr, target_sr=self.resample_val)
+        audio = librosa.resample(audio, orig_sr=sr, target_sr=self.resample_val)
+        return librosa.resample(audio, orig_sr=self.resample_val, target_sr=sr)
 
-    def requantize(self, audio):
+    def requantize(self, audio, sr):
         steps = 2**(self.requantize_val - 1)
         quantized = np.round(audio * steps) / steps
         return quantized
     
-    def noise(self, audio):
+    def noise(self, audio, sr):
         signal_power = np.mean(audio**2)
         snr_linear = 10**(self.noise_val/10)
         noise_power = signal_power / snr_linear
@@ -119,7 +120,7 @@ class RobustnessEvaluation():
         b, a = signal.butter(order, normalized_cutoff, btype='high')
         return signal.filtfilt(b, a, audio)
     
-    def amplitude(self, audio):
+    def amplitude(self, audio, sr):
         return audio * self.amplitude_val
     
     def check_watermark(self, audio, wm_func, hash, wmbits):
