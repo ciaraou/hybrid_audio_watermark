@@ -3,7 +3,7 @@ from scipy import signal
 
 import librosa
 
-from globals import metric_names, attack_names
+from globals import metric_names_r, attack_names
 
 
 RESAMPLE_VAL = 22050
@@ -90,7 +90,7 @@ class RobustnessEvaluation():
         pr = self.precision(tp, fp)
         nc = self.normalized_correlation(real, extracted)
         ber = self.bit_error_rate(real, diff)
-        return {metric_names[0]: dr, metric_names[1]: pr, metric_names[2]: nc, metric_names[3]: ber}
+        return {metric_names_r[0]: dr, metric_names_r[1]: pr, metric_names_r[2]: nc, metric_names_r[3]: ber}
 
     def resample(self, audio, sr):
         audio = librosa.resample(audio, orig_sr=sr, target_sr=self.resample_val)

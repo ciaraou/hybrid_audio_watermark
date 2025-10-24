@@ -51,21 +51,21 @@ def frombits(bits):
         chars.append(chr(int(''.join([str(bit) for bit in byte]), 2)))
     return ''.join(chars)
 
-def bit_change(value, bit, index=0):
-    mask = (1 << (index % FLOAT64_BITSIZE)) # system endian doesn't matter because float64_to_uint64_bits does big endian
+# def bit_change(value, bit, index=0):
+#     mask = (1 << (index % FLOAT64_BITSIZE)) # system endian doesn't matter because float64_to_uint64_bits does big endian
 
-    value_int = float64_to_uint64_bits(value) # convert to uint64 (type only - binary same) for bitwise op
+#     value_int = float64_to_uint64_bits(value) # convert to uint64 (type only - binary same) for bitwise op
     
-    if bit == "1" or bit == 1:
-        res = value_int | mask # bitwise or: value at index will be 1 
-    else:
-        # print("zero?")
-        # print(bit)
-        res = value_int & ~mask # bitwise and not: value at index will be 0
-        # print(res)
-        # print("")
+#     if bit == "1" or bit == 1:
+#         res = value_int | mask # bitwise or: value at index will be 1 
+#     else:
+#         # print("zero?")
+#         # print(bit)
+#         res = value_int & ~mask # bitwise and not: value at index will be 0
+#         # print(res)
+#         # print("")
 
-    return uint64_bits_to_float64(res) # convert back to float64 type
+#     return uint64_bits_to_float64(res) # convert back to float64 type
 
 def visual_bitwise_check(arr1, arr2):
     if len(arr1) != len(arr2):
@@ -74,16 +74,8 @@ def visual_bitwise_check(arr1, arr2):
     
     return "".join(["*" if arr1[i] != arr2[i] else arr2[i] for i in range(len(arr2))])
 
-def zero_lsb(signal, index=0):
-    res = np.copy(signal)
-    for i in range(len(signal)):
-        res[i] = bit_change(signal[i], 0, index)
-    return res
-
-# todo for watermark check
-# def check_binary(wmbits):
-    # binary_int = int(wmbits, 2)
-    # byte_number = binary_int.bit_length() + 7 // 8
-    # binary_array = binary_int.to_bytes(byte_number, "big") 
-    # ascii_text = binary_array.decode()
-    # print(ascii_text)
+# def zero_lsb(signal, index=0):
+#     res = np.copy(signal)
+#     for i in range(len(signal)):
+#         res[i] = bit_change(signal[i], 0, index)
+#     return res

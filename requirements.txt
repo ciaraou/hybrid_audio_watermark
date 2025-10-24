@@ -1,0 +1,7 @@
+AquaTk @ git+https://github.com/ciaraou/AQUA-Tk.git@f52da06d0caf0e0f1661bc81a8f0de6934c7ca56
+soundfile==0.13.1
+numpy==1.26.4
+ipython==8.26.0
+ipykernel==6.29.3
+pandas==2.2.1
+librosa==0.11.0

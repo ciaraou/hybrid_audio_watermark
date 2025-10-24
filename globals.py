@@ -28,4 +28,8 @@ class domain_choice(Enum):
     TRANSFORM = 2
     HYBRID = 3
 
+class evaluation_type(Enum):
+    PERCEPTUAL = 0
+    ROBUST = 1
+
 ODG_THRESHOLD = -1.0
