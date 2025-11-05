@@ -1,6 +1,6 @@
 import aquatk
 import numpy as np
-from typing import Dict, Tuple
+from typing import Tuple
 from aquatk.metrics import PEAQ
 
 from globals import ODG_THRESHOLD
@@ -8,10 +8,11 @@ from globals import ODG_THRESHOLD
 class PerceptualEvaluation:
     def evaluate_watermark(
         self, 
+        *,
         original_audio: np.ndarray, 
         watermarked_audio: np.ndarray,
         sr: int
-    ) -> Dict[str, float]:
+    ) -> dict[str, float]:
         """
         Evaluate watermark perceptibility by comparing original and watermarked audio.
         
@@ -23,7 +24,6 @@ class PerceptualEvaluation:
             Dictionary containing:
                 - 'odg': Objective Difference Grade (-4 to 0, where 0 is imperceptible)
                 - 'di': Distortion Index (0 to 4, where 0 is imperceptible)
-                - 'perceptible': Boolean indicating if watermark is perceptible
         """
         # normalize length
         min_len = min(len(original_audio), len(watermarked_audio))

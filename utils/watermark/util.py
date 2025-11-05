@@ -1,42 +1,7 @@
-import numpy as np
-import struct
 
-# Endian standard: BIG
-FLOAT64_BITSIZE = 64
 
-# util functions
-def even_audio(x_ea):
-    """ 
-    Makes audio buffer even length so it can be 2N long accurately. 
-    
-    Parameters
-    ----------
-    x_ea : array-like
-        audio buffer
-
-    Returns
-    -------
-    array-like
-        audio buffer (even length)
-    """
-    
-    if len(x_ea) % 2 != 0:
-        x_ea = np.append(x_ea, [0])
-    return x_ea
-
-def float64_to_uint64_bits(value): # type punning/ bit-level reinterpretation of signed float to uint
-    return struct.unpack('>Q', struct.pack('>d', value))[0]
-
-def uint64_bits_to_float64(bits): # type punning/ bit-level reinterpretation of uint to signed float
-    return struct.unpack('>d', struct.pack('>Q', bits))[0]
-
-def float64_to_binary(num):
-    return ''.join(f'{byte:08b}' for byte in struct.pack('>d', num))
-
-def bytestring_to_bitstring(byte_string):
-    return ''.join(format(byte, '08b') for byte in byte_string)
-
-def tobits(s):
+def tobits(*, s: str) -> list[int]:
+    """ Takes string and converts each ascii character to binary in list of int form """
     result = []
     for c in s:
         bits = bin(ord(c))[2:]
@@ -44,38 +9,19 @@ def tobits(s):
         result.extend([int(b) for b in bits])
     return result
 
-def frombits(bits):
+def frombits(*, bits: list[int]) -> str:
+    """ Take list of ints and combine into ascii string, reverses tobits """
     chars = []
     for b in range(len(bits) / 8):
         byte = bits[b*8:(b+1)*8]
         chars.append(chr(int(''.join([str(bit) for bit in byte]), 2)))
     return ''.join(chars)
 
-# def bit_change(value, bit, index=0):
-#     mask = (1 << (index % FLOAT64_BITSIZE)) # system endian doesn't matter because float64_to_uint64_bits does big endian
-
-#     value_int = float64_to_uint64_bits(value) # convert to uint64 (type only - binary same) for bitwise op
-    
-#     if bit == "1" or bit == 1:
-#         res = value_int | mask # bitwise or: value at index will be 1 
-#     else:
-#         # print("zero?")
-#         # print(bit)
-#         res = value_int & ~mask # bitwise and not: value at index will be 0
-#         # print(res)
-#         # print("")
-
-#     return uint64_bits_to_float64(res) # convert back to float64 type
-
-def visual_bitwise_check(arr1, arr2):
+def visual_bitwise_check(*, arr1: str, arr2: str) -> str:
+    """ takes two bitstrings and compares them, 0 or 1 where they're the same, * where they're different. """
     if len(arr1) != len(arr2):
         print("visual_bitwise_check requires equal length")
         return -1
     
     return "".join(["*" if arr1[i] != arr2[i] else arr2[i] for i in range(len(arr2))])
 
-# def zero_lsb(signal, index=0):
-#     res = np.copy(signal)
-#     for i in range(len(signal)):
-#         res[i] = bit_change(signal[i], 0, index)
-#     return res

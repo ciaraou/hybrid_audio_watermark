@@ -1,0 +1,2018 @@
+[
+    {
+        "audio_id": "002",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.2155883531390105
+    },
+    {
+        "audio_id": "002",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8651570486327071
+    },
+    {
+        "audio_id": "002",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.016613881814183388
+    },
+    {
+        "audio_id": "002",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9878947823145992
+    },
+    {
+        "audio_id": "002",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.9801498407861065
+    },
+    {
+        "audio_id": "002",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21856318709494105
+    },
+    {
+        "audio_id": "003",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.1369443848153941
+    },
+    {
+        "audio_id": "003",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.916906431904715
+    },
+    {
+        "audio_id": "003",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.027464375826845713
+    },
+    {
+        "audio_id": "003",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.964878798406741
+    },
+    {
+        "audio_id": "003",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 8.010668717280776
+    },
+    {
+        "audio_id": "003",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21860628063963777
+    },
+    {
+        "audio_id": "005",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.06897181566360236
+    },
+    {
+        "audio_id": "005",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9355901864865122
+    },
+    {
+        "audio_id": "005",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.01276896030168985
+    },
+    {
+        "audio_id": "005",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9517492728421029
+    },
+    {
+        "audio_id": "005",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.932015788487362
+    },
+    {
+        "audio_id": "005",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21849231338588898
+    },
+    {
+        "audio_id": "010",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.2947242659644272
+    },
+    {
+        "audio_id": "010",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8298384581473721
+    },
+    {
+        "audio_id": "010",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.07033663850180731
+    },
+    {
+        "audio_id": "010",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9135879978643124
+    },
+    {
+        "audio_id": "010",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.929275377910561
+    },
+    {
+        "audio_id": "010",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21848652976710792
+    },
+    {
+        "audio_id": "020",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.03825523710038636
+    },
+    {
+        "audio_id": "020",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.97000595406354
+    },
+    {
+        "audio_id": "020",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.11890848746767778
+    },
+    {
+        "audio_id": "020",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.017756570715393
+    },
+    {
+        "audio_id": "020",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.754263068732859
+    },
+    {
+        "audio_id": "020",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21819882709964092
+    },
+    {
+        "audio_id": "026",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.06303933003493518
+    },
+    {
+        "audio_id": "026",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.987070022793532
+    },
+    {
+        "audio_id": "026",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.07191501621719112
+    },
+    {
+        "audio_id": "026",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9918576821280407
+    },
+    {
+        "audio_id": "026",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.7005582083833595
+    },
+    {
+        "audio_id": "026",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2180983578313046
+    },
+    {
+        "audio_id": "030",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.004254086104237134
+    },
+    {
+        "audio_id": "030",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9394027861870424
+    },
+    {
+        "audio_id": "030",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.026138633989603532
+    },
+    {
+        "audio_id": "030",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9557276147036342
+    },
+    {
+        "audio_id": "030",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.888112003378355
+    },
+    {
+        "audio_id": "030",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2184048121022627
+    },
+    {
+        "audio_id": "046",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.07924139784172839
+    },
+    {
+        "audio_id": "046",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.990013278369279
+    },
+    {
+        "audio_id": "046",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.06977628294740565
+    },
+    {
+        "audio_id": "046",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.978647036917631
+    },
+    {
+        "audio_id": "046",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.80287414100929
+    },
+    {
+        "audio_id": "046",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2182833064975686
+    },
+    {
+        "audio_id": "048",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.14677873197839525
+    },
+    {
+        "audio_id": "048",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0412785205941866
+    },
+    {
+        "audio_id": "048",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.1460523110501683
+    },
+    {
+        "audio_id": "048",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.038607302267864
+    },
+    {
+        "audio_id": "048",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.487507566410545
+    },
+    {
+        "audio_id": "048",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21764748112620808
+    },
+    {
+        "audio_id": "134",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.0887652045546037
+    },
+    {
+        "audio_id": "134",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.931316746734367
+    },
+    {
+        "audio_id": "134",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.03209700148769626
+    },
+    {
+        "audio_id": "134",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9420230238751615
+    },
+    {
+        "audio_id": "134",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.956495688952336
+    },
+    {
+        "audio_id": "134",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21852890256152316
+    },
+    {
+        "audio_id": "135",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.5689534291196502
+    },
+    {
+        "audio_id": "135",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.6548019056958903
+    },
+    {
+        "audio_id": "135",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.5131679209641438
+    },
+    {
+        "audio_id": "135",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.680379312193637
+    },
+    {
+        "audio_id": "135",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.943619650852224
+    },
+    {
+        "audio_id": "135",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21850819797860493
+    },
+    {
+        "audio_id": "136",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.04163898876232894
+    },
+    {
+        "audio_id": "136",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9497617006786059
+    },
+    {
+        "audio_id": "136",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.16350320947904345
+    },
+    {
+        "audio_id": "136",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0545856975981875
+    },
+    {
+        "audio_id": "136",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.285255520590185
+    },
+    {
+        "audio_id": "136",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21711722996349905
+    },
+    {
+        "audio_id": "137",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.07103659817171382
+    },
+    {
+        "audio_id": "137",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.904816593060982
+    },
+    {
+        "audio_id": "137",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.13191092316959313
+    },
+    {
+        "audio_id": "137",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0288980229205733
+    },
+    {
+        "audio_id": "137",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.3780974110405655
+    },
+    {
+        "audio_id": "137",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21736219461773906
+    },
+    {
+        "audio_id": "138",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.0625129693721188
+    },
+    {
+        "audio_id": "138",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9606207861651999
+    },
+    {
+        "audio_id": "138",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.022671182846968715
+    },
+    {
+        "audio_id": "138",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.970383568240562
+    },
+    {
+        "audio_id": "138",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.675006690419846
+    },
+    {
+        "audio_id": "138",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21805078629926855
+    },
+    {
+        "audio_id": "139",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.011713626703569362
+    },
+    {
+        "audio_id": "139",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.950245815343814
+    },
+    {
+        "audio_id": "139",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.10226520673381129
+    },
+    {
+        "audio_id": "139",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.005691618465899
+    },
+    {
+        "audio_id": "139",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.680458898241482
+    },
+    {
+        "audio_id": "139",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21806009822748504
+    },
+    {
+        "audio_id": "140",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.22813811672021264
+    },
+    {
+        "audio_id": "140",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1139340669140037
+    },
+    {
+        "audio_id": "140",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.22301515788012835
+    },
+    {
+        "audio_id": "140",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1128313757319517
+    },
+    {
+        "audio_id": "140",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.626741342856702
+    },
+    {
+        "audio_id": "140",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21512387886785367
+    },
+    {
+        "audio_id": "141",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.31657398334576387
+    },
+    {
+        "audio_id": "141",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1847259591853465
+    },
+    {
+        "audio_id": "141",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.2732227878900901
+    },
+    {
+        "audio_id": "141",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1640909323326856
+    },
+    {
+        "audio_id": "141",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.5199915627056875
+    },
+    {
+        "audio_id": "141",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21769126572308317
+    },
+    {
+        "audio_id": "142",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.024963763973133372
+    },
+    {
+        "audio_id": "142",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9552908638864352
+    },
+    {
+        "audio_id": "142",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.050223753896336466
+    },
+    {
+        "audio_id": "142",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.970023366602601
+    },
+    {
+        "audio_id": "142",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.716394456533668
+    },
+    {
+        "audio_id": "142",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2153030309944631
+    },
+    {
+        "audio_id": "144",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.07343373154608396
+    },
+    {
+        "audio_id": "144",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9838011838698928
+    },
+    {
+        "audio_id": "144",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.17969877405945792
+    },
+    {
+        "audio_id": "144",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.064498171880264
+    },
+    {
+        "audio_id": "144",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.889746057796865
+    },
+    {
+        "audio_id": "144",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21842628066520225
+    },
+    {
+        "audio_id": "145",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.1512463684995823
+    },
+    {
+        "audio_id": "145",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8950592121692789
+    },
+    {
+        "audio_id": "145",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.1357898787265504
+    },
+    {
+        "audio_id": "145",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.895687000374338
+    },
+    {
+        "audio_id": "145",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.995946999068735
+    },
+    {
+        "audio_id": "145",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21858415982840665
+    },
+    {
+        "audio_id": "146",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.03753911902815948
+    },
+    {
+        "audio_id": "146",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.972636723103159
+    },
+    {
+        "audio_id": "146",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.12109191431086638
+    },
+    {
+        "audio_id": "146",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.019046403363698
+    },
+    {
+        "audio_id": "146",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.788279960163519
+    },
+    {
+        "audio_id": "146",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21825724484574405
+    },
+    {
+        "audio_id": "147",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.0765670902393579
+    },
+    {
+        "audio_id": "147",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9378144318900752
+    },
+    {
+        "audio_id": "147",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.10534792349602082
+    },
+    {
+        "audio_id": "147",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.023525800187751
+    },
+    {
+        "audio_id": "147",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.772156394291015
+    },
+    {
+        "audio_id": "147",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21823038421990915
+    },
+    {
+        "audio_id": "148",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.23535994655951062
+    },
+    {
+        "audio_id": "148",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8151889556775893
+    },
+    {
+        "audio_id": "148",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.16087177859748047
+    },
+    {
+        "audio_id": "148",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8694694367209428
+    },
+    {
+        "audio_id": "148",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.727493594655725
+    },
+    {
+        "audio_id": "148",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21814382703041932
+    },
+    {
+        "audio_id": "149",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.35495642376338854
+    },
+    {
+        "audio_id": "149",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.234080273801067
+    },
+    {
+        "audio_id": "149",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.3943940776896213
+    },
+    {
+        "audio_id": "149",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.2824364913588164
+    },
+    {
+        "audio_id": "149",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.264267634929121
+    },
+    {
+        "audio_id": "149",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21706013638956928
+    },
+    {
+        "audio_id": "150",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.16855314703513974
+    },
+    {
+        "audio_id": "150",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.061569642058193
+    },
+    {
+        "audio_id": "150",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.26497432636082585
+    },
+    {
+        "audio_id": "150",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1546873260103196
+    },
+    {
+        "audio_id": "150",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.593288879830892
+    },
+    {
+        "audio_id": "150",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21787428118345
+    },
+    {
+        "audio_id": "151",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.30849206871536927
+    },
+    {
+        "audio_id": "151",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.7988827811692807
+    },
+    {
+        "audio_id": "151",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.040821357655618236
+    },
+    {
+        "audio_id": "151",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9375669638871627
+    },
+    {
+        "audio_id": "151",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.866074463076748
+    },
+    {
+        "audio_id": "151",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21838710154726354
+    },
+    {
+        "audio_id": "152",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.1814556204704093
+    },
+    {
+        "audio_id": "152",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8616572024035378
+    },
+    {
+        "audio_id": "152",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.1109446079642818
+    },
+    {
+        "audio_id": "152",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8899603948177643
+    },
+    {
+        "audio_id": "152",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.972412862761761
+    },
+    {
+        "audio_id": "152",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21855047574218014
+    },
+    {
+        "audio_id": "153",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.0019950753583147522
+    },
+    {
+        "audio_id": "153",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9330727973268604
+    },
+    {
+        "audio_id": "153",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.10639346342349433
+    },
+    {
+        "audio_id": "153",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.004302401874757
+    },
+    {
+        "audio_id": "153",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.670463658713456
+    },
+    {
+        "audio_id": "153",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21803548265045267
+    },
+    {
+        "audio_id": "154",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.3692376627026592
+    },
+    {
+        "audio_id": "154",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.254157296945781
+    },
+    {
+        "audio_id": "154",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.36647715719882
+    },
+    {
+        "audio_id": "154",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.253356676745841
+    },
+    {
+        "audio_id": "154",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 4.766522382034428
+    },
+    {
+        "audio_id": "154",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.18455865219242612
+    },
+    {
+        "audio_id": "155",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.2017326982420554
+    },
+    {
+        "audio_id": "155",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8747513307624604
+    },
+    {
+        "audio_id": "155",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.1361763181205647
+    },
+    {
+        "audio_id": "155",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.880468198643924
+    },
+    {
+        "audio_id": "155",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.952069359213236
+    },
+    {
+        "audio_id": "155",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21850268883108842
+    },
+    {
+        "audio_id": "156",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.2981472050190968
+    },
+    {
+        "audio_id": "156",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.133309669431883
+    },
+    {
+        "audio_id": "156",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.22756093092093457
+    },
+    {
+        "audio_id": "156",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1216745997153037
+    },
+    {
+        "audio_id": "156",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.856822645771313
+    },
+    {
+        "audio_id": "156",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2183747754497643
+    },
+    {
+        "audio_id": "157",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.24401788971629992
+    },
+    {
+        "audio_id": "157",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.105574486777596
+    },
+    {
+        "audio_id": "157",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.1699784090421268
+    },
+    {
+        "audio_id": "157",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0673705028050984
+    },
+    {
+        "audio_id": "157",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.850871767514402
+    },
+    {
+        "audio_id": "157",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2183649162258809
+    },
+    {
+        "audio_id": "158",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.10292067301955642
+    },
+    {
+        "audio_id": "158",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.007872709789898
+    },
+    {
+        "audio_id": "158",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.09659354902426391
+    },
+    {
+        "audio_id": "158",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.001846910646314
+    },
+    {
+        "audio_id": "158",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.83184871067279
+    },
+    {
+        "audio_id": "158",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2183333805410892
+    },
+    {
+        "audio_id": "159",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.09399843800411571
+    },
+    {
+        "audio_id": "159",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9873672107788567
+    },
+    {
+        "audio_id": "159",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.06653964484958262
+    },
+    {
+        "audio_id": "159",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.972687760737636
+    },
+    {
+        "audio_id": "159",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.825995984970748
+    },
+    {
+        "audio_id": "159",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21832378836448663
+    },
+    {
+        "audio_id": "160",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.2142014691335965
+    },
+    {
+        "audio_id": "160",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.070308333635589
+    },
+    {
+        "audio_id": "160",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.09185600830112146
+    },
+    {
+        "audio_id": "160",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9952848864803305
+    },
+    {
+        "audio_id": "160",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.860591695514888
+    },
+    {
+        "audio_id": "160",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21838087468377965
+    },
+    {
+        "audio_id": "161",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.09969311319588398
+    },
+    {
+        "audio_id": "161",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9962894953471388
+    },
+    {
+        "audio_id": "161",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.06948809111905416
+    },
+    {
+        "audio_id": "161",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9779541910542733
+    },
+    {
+        "audio_id": "161",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.866289111417395
+    },
+    {
+        "audio_id": "161",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21838990114962356
+    },
+    {
+        "audio_id": "162",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.04948946543810981
+    },
+    {
+        "audio_id": "162",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9627751221091705
+    },
+    {
+        "audio_id": "162",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.09148608340574611
+    },
+    {
+        "audio_id": "162",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9942452931530879
+    },
+    {
+        "audio_id": "162",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.857456544909672
+    },
+    {
+        "audio_id": "162",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2183757874440986
+    },
+    {
+        "audio_id": "163",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.12521300649319425
+    },
+    {
+        "audio_id": "163",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0191086459246517
+    },
+    {
+        "audio_id": "163",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.10073424841783564
+    },
+    {
+        "audio_id": "163",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0001427966717853
+    },
+    {
+        "audio_id": "163",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.664725496326882
+    },
+    {
+        "audio_id": "163",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21802851880530963
+    },
+    {
+        "audio_id": "164",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.13789804379396264
+    },
+    {
+        "audio_id": "164",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.031006491475276
+    },
+    {
+        "audio_id": "164",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.1187737195077656
+    },
+    {
+        "audio_id": "164",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.020095575974898
+    },
+    {
+        "audio_id": "164",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.689038618509815
+    },
+    {
+        "audio_id": "164",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21807661695902988
+    },
+    {
+        "audio_id": "165",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.10118700595646718
+    },
+    {
+        "audio_id": "165",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0000740516991535
+    },
+    {
+        "audio_id": "165",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.11334706984895952
+    },
+    {
+        "audio_id": "165",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0104526685525483
+    },
+    {
+        "audio_id": "165",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.69966260470463
+    },
+    {
+        "audio_id": "165",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21809807128253245
+    },
+    {
+        "audio_id": "166",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.1456059887257623
+    },
+    {
+        "audio_id": "166",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.037276234036677
+    },
+    {
+        "audio_id": "166",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.13231964683976824
+    },
+    {
+        "audio_id": "166",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.026476064733509
+    },
+    {
+        "audio_id": "166",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.813007091521968
+    },
+    {
+        "audio_id": "166",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2183015022505606
+    },
+    {
+        "audio_id": "167",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.13353457881863023
+    },
+    {
+        "audio_id": "167",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0209283539374563
+    },
+    {
+        "audio_id": "167",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.12968730523151628
+    },
+    {
+        "audio_id": "167",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.025499636703919
+    },
+    {
+        "audio_id": "167",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.744560827553966
+    },
+    {
+        "audio_id": "167",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21818082471388547
+    },
+    {
+        "audio_id": "168",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.605612238967044
+    },
+    {
+        "audio_id": "168",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.32973105479575
+    },
+    {
+        "audio_id": "168",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.2261830322652666
+    },
+    {
+        "audio_id": "168",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.1191808002255126
+    },
+    {
+        "audio_id": "168",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.845363681958906
+    },
+    {
+        "audio_id": "168",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21835600419851128
+    },
+    {
+        "audio_id": "169",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.07626495891046782
+    },
+    {
+        "audio_id": "169",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9824198069774912
+    },
+    {
+        "audio_id": "169",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.088302096704947
+    },
+    {
+        "audio_id": "169",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9995687119946755
+    },
+    {
+        "audio_id": "169",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.285025624463764
+    },
+    {
+        "audio_id": "169",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21710469850691833
+    },
+    {
+        "audio_id": "170",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.13379775946418518
+    },
+    {
+        "audio_id": "170",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9057649434654707
+    },
+    {
+        "audio_id": "170",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.016701901251201454
+    },
+    {
+        "audio_id": "170",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9325805138127568
+    },
+    {
+        "audio_id": "170",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.886357905814803
+    },
+    {
+        "audio_id": "170",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21842174862841768
+    },
+    {
+        "audio_id": "171",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.31483151129205245
+    },
+    {
+        "audio_id": "171",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.2057434910670475
+    },
+    {
+        "audio_id": "171",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.32821227093071853
+    },
+    {
+        "audio_id": "171",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.2206818801587587
+    },
+    {
+        "audio_id": "171",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.2027026694910266
+    },
+    {
+        "audio_id": "171",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21684741330328847
+    },
+    {
+        "audio_id": "172",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.16582207819385003
+    },
+    {
+        "audio_id": "172",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.885072416771435
+    },
+    {
+        "audio_id": "172",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.0486230939517272
+    },
+    {
+        "audio_id": "172",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9193736297916586
+    },
+    {
+        "audio_id": "172",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.81596134425832
+    },
+    {
+        "audio_id": "172",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21830393270392967
+    },
+    {
+        "audio_id": "173",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.13407543727943186
+    },
+    {
+        "audio_id": "173",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.031440365601141
+    },
+    {
+        "audio_id": "173",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.11227533505298401
+    },
+    {
+        "audio_id": "173",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0119835240551565
+    },
+    {
+        "audio_id": "173",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.178874818144276
+    },
+    {
+        "audio_id": "173",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21679591581718988
+    },
+    {
+        "audio_id": "174",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.4876837217931945
+    },
+    {
+        "audio_id": "174",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.6821316352108115
+    },
+    {
+        "audio_id": "174",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.030264688571316468
+    },
+    {
+        "audio_id": "174",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9645316311900862
+    },
+    {
+        "audio_id": "174",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.9912898870636315
+    },
+    {
+        "audio_id": "174",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2185786451154444
+    },
+    {
+        "audio_id": "175",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.07173386889306614
+    },
+    {
+        "audio_id": "175",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0121348388970794
+    },
+    {
+        "audio_id": "175",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.15265696472703275
+    },
+    {
+        "audio_id": "175",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.05678238874061
+    },
+    {
+        "audio_id": "175",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.815600896180449
+    },
+    {
+        "audio_id": "175",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21830606434684954
+    },
+    {
+        "audio_id": "176",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.3030642985371779
+    },
+    {
+        "audio_id": "176",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8588724807033614
+    },
+    {
+        "audio_id": "176",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.09274934924825866
+    },
+    {
+        "audio_id": "176",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9373153717877405
+    },
+    {
+        "audio_id": "176",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 8.027109860956429
+    },
+    {
+        "audio_id": "176",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21862850566943356
+    },
+    {
+        "audio_id": "177",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.40878973817932507
+    },
+    {
+        "audio_id": "177",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.767767500256708
+    },
+    {
+        "audio_id": "177",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.28262985522385337
+    },
+    {
+        "audio_id": "177",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8458994750593447
+    },
+    {
+        "audio_id": "177",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 8.033514872246949
+    },
+    {
+        "audio_id": "177",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2186379133185131
+    },
+    {
+        "audio_id": "178",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.11597109350028215
+    },
+    {
+        "audio_id": "178",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.0112428581174977
+    },
+    {
+        "audio_id": "178",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.08727252862408776
+    },
+    {
+        "audio_id": "178",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9891606162217133
+    },
+    {
+        "audio_id": "178",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.043726700345775
+    },
+    {
+        "audio_id": "178",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2163109172465948
+    },
+    {
+        "audio_id": "179",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 6.965730997269729
+    },
+    {
+        "audio_id": "179",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21603878858448197
+    },
+    {
+        "audio_id": "179",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.3757650243355093
+    },
+    {
+        "audio_id": "179",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -2.2660158063409317
+    },
+    {
+        "audio_id": "179",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 6.965730997269729
+    },
+    {
+        "audio_id": "179",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.21603878858448197
+    },
+    {
+        "audio_id": "181",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.08136994739762968
+    },
+    {
+        "audio_id": "181",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.908982388264343
+    },
+    {
+        "audio_id": "181",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.032076121908216175
+    },
+    {
+        "audio_id": "181",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.972668900666628
+    },
+    {
+        "audio_id": "181",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.727359093438044
+    },
+    {
+        "audio_id": "181",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2181486375228628
+    },
+    {
+        "audio_id": "182",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Distortion Index",
+        "value": -0.010615451106971114
+    },
+    {
+        "audio_id": "182",
+        "watermark_type": "Hybrid Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.9398909287049921
+    },
+    {
+        "audio_id": "182",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 0.06958490879427565
+    },
+    {
+        "audio_id": "182",
+        "watermark_type": "Transform Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": -1.8894190893733576
+    },
+    {
+        "audio_id": "182",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Distortion Index",
+        "value": 7.020955082645624
+    },
+    {
+        "audio_id": "182",
+        "watermark_type": "Time Domain Watermark",
+        "metric": "Objective Difference Grade",
+        "value": 0.2162502843736752
+    }
+]
