@@ -41,28 +41,21 @@ class Echo():
         delay_samples_1 = int(echo_parameters.DELAY_1 * sr)
         
         # Compute the cepstrum
-        # 1. Take FFT of the signal
+        # Take FFT of the signal
         spectrum = np.fft.fft(frame)
         
-        # 2. Take log magnitude (add small epsilon to avoid log(0))
+        # Take log magnitude (add small epsilon to avoid log(0))
         log_spectrum = np.log(np.abs(spectrum) + 1e-10)
         
-        # 3. Take inverse FFT to get cepstrum
+        # Take inverse FFT to get cepstrum
         cepstrum = np.real(np.fft.ifft(log_spectrum))
         
         # 4. Look at the magnitude of cepstrum at both delay positions
         # The cepstrum will have a peak at the echo delay (in samples, called "quefrency")
-        if delay_samples_0 < len(cepstrum):
-            cepstrum_0 = np.abs(cepstrum[delay_samples_0])
-        else:
-            cepstrum_0 = 0
+        cepstrum_0 = np.abs(cepstrum[delay_samples_0]) if delay_samples_0 < len(cepstrum) else 0
+        cepstrum_1 = np.abs(cepstrum[delay_samples_1]) if delay_samples_1 < len(cepstrum) else 0
         
-        if delay_samples_1 < len(cepstrum):
-            cepstrum_1 = np.abs(cepstrum[delay_samples_1])
-        else:
-            cepstrum_1 = 0
-        
-        # Optional: look at a small window around each delay for more robustness
+        # Look at a small window around each delay for more robustness
         window = 2
         if delay_samples_0 + window < len(cepstrum):
             cepstrum_0 = np.max(np.abs(cepstrum[max(0, delay_samples_0-window):delay_samples_0+window+1]))

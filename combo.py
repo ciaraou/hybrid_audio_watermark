@@ -131,61 +131,109 @@ class Embeds:
         self.watermark_data = watermark_data
 
     def embed_combo_watermark(self, *, designations: list[domain_choice], audio: np.ndarray, sr: int) -> np.ndarray:
-        watermark_ind = 0
+        audio = audio.copy()
+        
+        # Batch transform embeddings
+        transform_frames_to_embed = []
         for i in range(len(designations) - 1):
-            if i*hop_length >= len(audio): # just in case
-                print("broken")
-                print(i*hop_length)
+            if i*hop_length >= len(audio):
+                break
+            if designations[i] == domain_choice.TRANSFORM or designations[i] == domain_choice.HYBRID:
+                wmbit = int(self.watermark_data[i%len(self.watermark_data)])
+                transform_frames_to_embed.append((i, wmbit))
+        
+        # all transform frames
+        if transform_frames_to_embed:
+            # dct transformation and precalculations
+            dct_coeffs = self.transform_w.windowed_dct(x=audio)
+            if isinstance(dct_coeffs, int) and dct_coeffs == -1:
+                raise ValueError("DCT failed: expected 1D audio buffer")
+            num_windows, res_N = dct_coeffs.shape
+            bins0, bins1 = self.transform_w.frequency_bands(res_N_fb=res_N)
+            coefs_per_frame = bins1 - bins0
+            
+            # modify
+            for frame_i, wmbit in transform_frames_to_embed:
+                if frame_i >= num_windows:
+                    continue
+                coef_i = self.transform_w.get_coef_i(bins0_gci=bins0, i_gci=frame_i, coefs_per_frame_gci=coefs_per_frame)
+                dct_coeffs[frame_i] = self.transform_w._embed_qim_bit_helper(
+                    frame_coeffs=dct_coeffs[frame_i], 
+                    bit=wmbit, 
+                    coef_i=coef_i, 
+                    alpha=qim_parameters.ALPHA
+                )
+            
+            # idct
+            audio = self.transform_w.windowed_idct(frames=dct_coeffs, x=audio)
+        
+        # time embeddings
+        for i in range(len(designations) - 1):
+            if i*hop_length >= len(audio):
                 break
 
             start_ind = i*hop_length
-            end_ind = start_ind+hop_length if start_ind+hop_length < len(audio) else 0
+            end_ind = start_ind+hop_length if start_ind+hop_length < len(audio) else len(audio)
             frame = audio[start_ind:end_ind]
 
-            wmbit = self.watermark_data[watermark_ind%len(self.watermark_data)]
+            wmbit = int(self.watermark_data[i%len(self.watermark_data)])
 
             if designations[i] == domain_choice.TIME or designations[i] == domain_choice.HYBRID:
                 audio[start_ind:end_ind] = self.time_w.embed_watermark_bit(frame=frame, sr=sr, wmbit=wmbit)
-                
 
-            if designations[i] == domain_choice.TRANSFORM or designations[i] == domain_choice.HYBRID:
-                audio = self.transform_w.embed_qim_bit(y=audio, ind=i, wmbit=wmbit)
-
-            watermark_ind += 1
         return audio
 
     def extract_combo_watermark(self, *, designations: list[domain_choice], audio: np.ndarray, sr: int) -> list[str]:
-        watermark_ind = 0
+        # Batch transform extractions
+        transform_frames_to_extract = []
+        for i in range(len(designations) - 1):
+            if i*hop_length >= len(audio):
+                break
+            if designations[i] == domain_choice.TRANSFORM or designations[i] == domain_choice.HYBRID:
+                transform_frames_to_extract.append(i)
+        
+        # transform extractions
+        transform_extractions = {}
+        if transform_frames_to_extract:
+            # dct transformation and precalculations
+            dct_coeffs = self.transform_w.windowed_dct(x=audio)
+            if isinstance(dct_coeffs, int) and dct_coeffs == -1:
+                raise ValueError("DCT failed: expected 1D audio buffer")
+            num_windows, res_N = dct_coeffs.shape
+            bins0, bins1 = self.transform_w.frequency_bands(res_N_fb=res_N)
+            coefs_per_frame = bins1 - bins0
+            
+            # extract
+            for frame_i in transform_frames_to_extract:
+                if frame_i >= num_windows:
+                    continue
+                coef_i = self.transform_w.get_coef_i(bins0_gci=bins0, i_gci=frame_i, coefs_per_frame_gci=coefs_per_frame)
+                bit = self.transform_w._extract_qim_bit_helper(frame_coeffs=dct_coeffs[frame_i], coef_i=coef_i, alpha=qim_parameters.ALPHA)
+                transform_extractions[frame_i] = bit
+        
+        # time extractions
         full_watermark = []
-        conflict = []
         for i in range(len(designations) - 1):
             if i*hop_length >= len(audio): # just in case
                 break
 
             start_ind = i*hop_length
-            end_ind = start_ind+hop_length if start_ind+hop_length < len(audio) else 0
+            end_ind = start_ind+hop_length if start_ind+hop_length < len(audio) else len(audio)
             frame = audio[start_ind:end_ind]
 
-            b1 = None
-            b2 = None
-            if designations[i] == domain_choice.TIME or designations[i] == domain_choice.HYBRID:
-                b1 = self.time_w.extract_watermark_bit(frame=frame, sr=sr)
-                
-            if designations[i] == domain_choice.TRANSFORM or designations[i] == domain_choice.HYBRID:
-                b2 = self.transform_w.extract_qim_bit(y=audio, ind=i)
+            # do all
+            if designations[i] == domain_choice.TIME:
+                bit = self.time_w.extract_watermark_bit(frame=frame, sr=sr)
+                full_watermark.append(str(bit))
+            elif designations[i] == domain_choice.TRANSFORM:
+                full_watermark.append(str(transform_extractions[i]))
+            # elif designations[i] == domain_choice.HYBRID: # keeping commented in case I add back layered frames
+            #     b1 = self.time_w.extract_watermark_bit(frame=frame, sr=sr)
+            #     b2 = transform_extractions.get(i, 0)
+            #     full_watermark.append(str(b2))
+            # else:  # NONE or unknown
+            #     full_watermark.append('0')
 
-            
-            if b1 == None:
-                full_watermark.append(str(b2))
-            elif b2 == None:
-                full_watermark.append(str(b1))
-            else:
-                if b1 != b2:
-                    conflict.append(i)
-                # pick one randomly
-                full_watermark.append(str(b2))
-
-            watermark_ind += 1
         return full_watermark
 
 

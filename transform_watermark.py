@@ -1,6 +1,5 @@
 import utils.watermark.util as watermark_utils
 from utils.watermark.dct_transform import DCT
-from deprecated.window import Window
 from globals import qim_parameters
 
 import numpy as np
@@ -64,7 +63,7 @@ class WatermarkDCT(DCT):
         
         return coeffs
     
-    def embed_qim_bit(self, y: np.ndarray, ind: int, wmbit: int) -> np.ndarray:
+    def embed_qim_bit(self, y: tuple, ind: int, wmbit: int) -> np.ndarray:
         """
         Calculate dct, make precalculations, call _embed_qim_bit_helper on designated frame, perform idct. 
         
@@ -82,8 +81,7 @@ class WatermarkDCT(DCT):
         np.ndarray
             Modified coefficients
         """
-        res = self.windowed_dct(x=y)
-        num_windows, res_N = res.shape
+        num_windows, res_N = y.shape
 
         bins0, bins1 = self.frequency_bands(res_N_fb=res_N)
         coefs_per_frame = bins1 - bins0
@@ -92,10 +90,8 @@ class WatermarkDCT(DCT):
         coef_i = self.get_coef_i(bins0_gci=bins0, i_gci=ind, coefs_per_frame_gci=coefs_per_frame)
             
         # Use the per-frame function
-        res[frame_i] = self._embed_qim_bit_helper(frame_coeffs=res[frame_i], bit=wmbit, coef_i=coef_i, alpha=qim_parameters.ALPHA)
-
-        ret = self.windowed_idct(frames=res, x=y)
-        return ret
+        y[frame_i] = self._embed_qim_bit_helper(frame_coeffs=y[frame_i], bit=wmbit, coef_i=coef_i, alpha=qim_parameters.ALPHA)
+        return y
     
 
     def embed_qim_full(self, x: np.ndarray, alpha: float = qim_parameters.ALPHA, bpf: int = 1) -> np.ndarray:
@@ -120,7 +116,7 @@ class WatermarkDCT(DCT):
             
             # Use the per-frame function
             res[frame_i] = self._embed_qim_bit_helper(frame_coeffs=res[frame_i], bit=b, coef_i=coef_i, alpha=alpha)
-        
+
         x = self.windowed_idct(frames=res, x=x)
         return x 
     
