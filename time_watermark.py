@@ -1,32 +1,10 @@
 import numpy as np
-import util as watermark_utils
 
-class LSB():
-    def __init__(self, key, watermark):
-        """
-        
-        Parameters
-        ----------
-        key : array_like
-            list of tuples. the key acts as indexing for watermark bits. 
-            [(sample_index_0, bit_index_0), (sample_index_1, bit_index_1)... (sample_index_n, bit_index_n)] 
-            Right now all bit_index should default to 0 for rightmost, and all sample_index are chosen randomly. 
-            TODO: Both can be calculated for optimization later. 
+from globals import echo_parameters, hop_length
 
-        watermark : array_like
-            1d array of watermark data
-        """
-
-        self.key = key
-        self.watermark = watermark
-
-    # def float_to_byte(self, value):
-    #     value_bytes = value
-    #     if not self.bigendian:  # if it's little endian, swap byte order
-    #         value_bytes = value_bytes.byteswap()
-    #     return value_bytes.tobytes()
+class Echo():
     
-    def embed_watermark(self, x):
+    def embed_watermark_bit(self, *, frame: np.ndarray, sr: int, wmbit: int) -> np.ndarray:
         """
         
         Parameters
@@ -34,29 +12,67 @@ class LSB():
         x : array_like
             1d host audio array
         """
-        y = np.copy(x)
-        for wmbit, ind in zip(self.watermark, self.key):
-            # print(ind)
-            sample = x[ind[0] % len(x)]
-            # print(sample)
-            # print(watermark_utils.float64_to_binary(sample))
-            sample = watermark_utils.bit_change(sample, wmbit, ind[1])# if wmbit else self.bit0(sample, ind[1])
-            # print(watermark_utils.float64_to_binary(sample))
-            
-            y[ind[0] % len(x)] = sample
-            # print(watermark_utils.float64_to_binary(y[ind[0]]))
-            # print("")
 
+        delay = echo_parameters.DELAY_0 if wmbit == 0 else echo_parameters.DELAY_1
+        sample = int(delay*sr)
+
+        res = frame.copy()
+
+        res[sample%len(res):] += echo_parameters.ALPHA*frame[:-sample%len(res)]
+
+        # normalize
+        max_val = np.max(np.abs(res))
+        if max_val > 1.0:
+            res = res / max_val
+
+        return res
+    
+    def full_embed_watermark(self, *, y: np.ndarray, sr: int, wmbits: list[int]) -> np.ndarray:
+        frames = len(y)//hop_length
+
+        for i in range(frames):
+            y[i*hop_length:(i+1)*hop_length] = self.embed_watermark_bit(frame=y[i*hop_length:(i+1)*hop_length], sr=sr, wmbit=wmbits[i%len(wmbits)])
+    
         return y
     
-    def extract_watermark(self, y):
-        x = np.copy(y)
-        extracted_watermark = np.zeros(len(self.watermark), dtype=int)
-        for i in range(len(self.key)):
-            ind = self.key[i]
-            sample = y[ind[0] % len(y)]
-            # print(watermark_utils.float64_to_binary(sample))
-            extracted_watermark[i] = watermark_utils.float64_to_binary(sample)[-((ind[1]%watermark_utils.FLOAT64_BITSIZE)+1)] # index from right
-            x[ind[0] % len(y)] = sample
+    def extract_watermark_bit(self, *, frame: np.ndarray, sr: int) -> int:
+        # Convert delays from seconds to samples
+        delay_samples_0 = int(echo_parameters.DELAY_0 * sr)
+        delay_samples_1 = int(echo_parameters.DELAY_1 * sr)
+        
+        # Compute the cepstrum
+        # Take FFT of the signal
+        spectrum = np.fft.fft(frame)
+        
+        # Take log magnitude (add small epsilon to avoid log(0))
+        log_spectrum = np.log(np.abs(spectrum) + 1e-10)
+        
+        # Take inverse FFT to get cepstrum
+        cepstrum = np.real(np.fft.ifft(log_spectrum))
+        
+        # 4. Look at the magnitude of cepstrum at both delay positions
+        # The cepstrum will have a peak at the echo delay (in samples, called "quefrency")
+        cepstrum_0 = np.abs(cepstrum[delay_samples_0]) if delay_samples_0 < len(cepstrum) else 0
+        cepstrum_1 = np.abs(cepstrum[delay_samples_1]) if delay_samples_1 < len(cepstrum) else 0
+        
+        # Look at a small window around each delay for more robustness
+        window = 2
+        if delay_samples_0 + window < len(cepstrum):
+            cepstrum_0 = np.max(np.abs(cepstrum[max(0, delay_samples_0-window):delay_samples_0+window+1]))
+        
+        if delay_samples_1 + window < len(cepstrum):
+            cepstrum_1 = np.max(np.abs(cepstrum[max(0, delay_samples_1-window):delay_samples_1+window+1]))
+        
+        # The bit corresponds to whichever delay has stronger cepstral peak
+        extracted_bit = 0 if cepstrum_0 > cepstrum_1 else 1
+        
+        return extracted_bit
+    
+    def full_extract_watermark(self, *, y: np.ndarray, sr: int) -> list[str]:
+        frames = len(y)//hop_length
 
-        return x, ''.join(str(bit) for bit in extracted_watermark)
+        res = []
+        for i in range(frames):
+            b = self.extract_watermark_bit(frame=y[i*hop_length:(i+1)*hop_length], sr=sr)
+            res.append(str(b))
+        return res
